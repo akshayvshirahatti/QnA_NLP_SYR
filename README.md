@@ -13,17 +13,20 @@ This Flask application serves as a question-answering system that allows users t
 ```bash
 git clone https://github.com/akshayvshirahatti/QuestionAnsweringSystemUsingWord2VecAndGloVe.git
 ```
+2. Download the glove model using the link below and place this text file in Flask/models folder
 
-2. Create Project on Firebase and change rule from 'read' to 'write' on Firebase Storage.
-3. Add Firebase configuration in Flask/app.py file
-4. Change the directory to Flask by doing cd Flask
-5. Run the requirements.txt file to install all the dependencies for the project
+https://www.kaggle.com/datasets/sawarn69/glove6b100dtxt
+
+3. Create Project on Firebase and change rule from 'read' to 'write' on Firebase Storage.
+4. Add Firebase configuration in Flask/app.py file
+5. Change the directory to Flask by doing cd Flask
+6. Run the requirements.txt file to install all the dependencies for the project
 
 ```bash
 pip install -r requirements.txt
 ```
 
-6. Install cdQA using the following commands
+7. Install cdQA using the following commands
 
 ```bash
 git clone https://github.com/cdqa-suite/cdQA.git
@@ -37,13 +40,13 @@ cd cdQA
 pip install -e .
 ```
 
-7. Run app.py file
+8. Run app.py file
 
 ```bash
 python app.py
 ```
 
-8. If there is an error while running app.py do the following,
+9. If there is an error while running app.py do the following,
 
 ```bash
 git clone -b legacy_py3.6 https://github.com/QUVA-Lab/e2cnn.git
@@ -57,7 +60,7 @@ cd e2cnn
 python setup.py install
 ```
 
-9. Open your browser write your IP Address and add :8080 (example- http://192.168.114.84:8080/).
+10. Open your browser write your IP Address and add :8080 (example- http://192.168.114.84:8080/).
 
 Paste your firebase configurations in the following code in app.py
 
