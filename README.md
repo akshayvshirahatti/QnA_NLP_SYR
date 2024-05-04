@@ -11,7 +11,7 @@ This Flask application serves as a question-answering system that allows users t
 1. Clone the repository from github
 
 ```bash
-git clone
+git clone https://github.com/akshayvshirahatti/QuestionAnsweringSystemUsingWord2VecAndGloVe.git
 ```
 
 2. Create Project on Firebase and change rule from 'read' to 'write' on Firebase Storage.
