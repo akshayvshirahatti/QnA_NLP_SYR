@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: none;
+      /* Changed from vertical to none */
+    }
+
+    button[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 2% auto;
+      max-width: 800px;
+      /* Centered the form */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .head {
+      background-color: #b5b5b5;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .head h1 {
+      color: black;
+      font-size: 2.5em;
+      /* Responsive font size */
+    }
+
+    .head p {
+      font-size: 1.2em;
+    }
+
+    .head a {
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+      padding: 0 10px;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover,
+    .topnav a.active {
+      background-color: #555;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      background-color: #333;
+      color: white;
+    }
+
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    footer img {
+      max-height: 70px;
+      width: auto;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .wrapper {
+      min-height: 100%;
+
+      /* Equal to height of footer */
+      /* But also accounting for potential margin-bottom of last child */
+      margin-bottom: -50px;
+    }
+
+    .footer,
+    .push {
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="/">Syracuse University</a>
+    <a href="#search">CIS 600: Natural Language Processing</a>
+  </div>
+  <div class="head">
+    <h1>Question-Answer System</h1>
+    <p><strong>Model Used:</strong> {{ model_type }}</p>
+  </div>
+  <div class="container">
+    <form action="/" method="POST">
+      <label for="fname">Question</label>
+      <input type="text" id="fname" name="question" placeholder="Enter Question.." value="{{question}}">
+      <button type="submit" name='btn' value='qa'>Submit</button>
+    </form>
+    <br>
+    <label for="subject">Answer</label>
+    <textarea readonly id="subject" name="answer" placeholder="..." style="height:200px">{{answer}}</textarea>
+  </div>
+
+
+</body>
+
+</html>
